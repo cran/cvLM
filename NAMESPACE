@@ -1,0 +1,12 @@
+useDynLib(cvLM, .registration=TRUE)
+importFrom(Rcpp, evalCpp)
+importFrom(RcppParallel, RcppParallelLibs)
+importFrom(stats, AIC, BIC, coef, family, gaussian, is.empty.model, model.frame, model.matrix, model.response,
+           nobs, summary.lm)
+importFrom(utils, setTxtProgressBar, txtProgressBar)
+export(cvLM)
+export(grid.search)
+export(reg.table)
+S3method(cvLM, formula)
+S3method(cvLM, lm)
+S3method(cvLM, glm)
